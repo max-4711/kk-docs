@@ -1,13 +1,5 @@
 # Installation
 
-Grundsätzlich ist eine Installation zur Ausführung von Kirschenkrönung nicht zwingend nötig: Ein Klick auf die Datei `Launcher4711.exe` reicht, und die Software startet. Aus Gründen der Bequemlichkeit wird eine Installation dennoch empfohlen.
-
-Das Installationsprogramm kann unter folgender Adresse heruntergeladen werden: [https://go.studio-4711.com/kk-download](https://go.studio-4711.com/kk-download)
-
-Das Installationsprogramm entpackt alle für die Ausführung benötigten Datein in das Verzeichnis `%localappdata%\Kirschenkroenung\App`, legt eine Desktop-Verknüpfung an und startet das Programm. Administratorrechte werden _nicht_ benötigt.
-
-Bei jedem Programmstart wird automatisch geprüft, ob es eine aktuellere Programmversion gibt. Falls ja, wird das Update automatisch heruntergeladen und installiert, bevor das Programm gestartet wird (sofern dieser Prozess nicht vom Benutzer abgebrochen bzw. übersprungen wird.)
-
 ## Systemanforderungen
 
 ### Grundfunktionen
@@ -46,3 +38,33 @@ Während der Präsentationsphase, also der eigentlichen Veranstaltung, werden me
 ### Zusatzfunktionen
 
 * Einbetten von Webseiten: Stabile, schnelle Internetverbindung
+
+## Eigentliche Installation
+
+Grundsätzlich ist eine Installation zur Ausführung von Kirschenkrönung nicht zwingend nötig: Ein Klick auf die Datei `Launcher4711.exe` reicht, und die Software startet. Aus Gründen der Bequemlichkeit wird eine Installation dennoch empfohlen.
+
+Das Installationsprogramm kann unter folgender Adresse heruntergeladen werden: [https://go.studio-4711.com/kk-download](https://go.studio-4711.com/kk-download)
+
+![](images/001-installer.png "Installationsprogramm")
+
+Das Installationsprogramm entpackt alle für die Ausführung benötigten Datein in das Verzeichnis `%localappdata%\Kirschenkroenung\App`, legt eine Desktop-Verknüpfung an und startet das Programm. Administratorrechte werden _nicht_ benötigt.
+
+Bei jedem Programmstart wird automatisch geprüft, ob es eine aktuellere Programmversion gibt. Falls ja, wird das Update automatisch heruntergeladen und installiert, bevor das Programm gestartet wird (sofern dieser Prozess nicht vom Benutzer abgebrochen bzw. übersprungen wird.)
+
+## Zusatzprogramme
+
+In vielen Fällen wird für die Verwendung der Mikrofone (zwecks Lautstärkemessung) die Installation von zusätzlicher Software vom jeweiligen Hersteller benötigt. Dies gilt insbesondere, wenn es sich dabei um "Spezialhardware" gilt, die nicht per USB angeschlossen wird.
+
+Ohne die passende Software kann es sein, dass Kirschenkrönung die Mikrofone nicht gar nicht erst sehen kann oder nicht korrekt mit ihnen kommunizieren kann. Auskunft über etwaige nötige Zusatzsoftware gibt die Anleitung der Hardware bzw. die Webseite des jeweiligen Herstellers.
+
+## Mikrofonkonfiguration
+
+Wie oben bereits erwähnt, ist es wichtig, dass sämtliche von Windows oder Drittanbieternsoftware bereitgestellte Softwarefunktionen zur automatischen Pegelkompensation, Rauschunterdrückung, "Audioverbesserungen" o.Ä. unbedingt deaktiviert werden! Diese verfälschen andernfalls die Messungen oder machen sie komplett unbrauchbar, weil dabei Teile der Audiosignale verstärkt oder abgeschwächt werden.
+
+Unter Windows 11 findet sich entsprechende Einstellungen unter "Einstellungen" > "System" > "Sound" > "Mikrofon" (der Eintrag unter "Eingabe" für das betreffende Mikrofon) > "Audioverbesserungen".
+
+Darüber hinaus sollte die Lautstärke/Empfindlichkeit des Mikrofons auf 100% eingestellt werden (im zuvor bereits erwähnten Einstellungsmenü unter "Einganslautstärke").
+
+![](images/002-windows-audioeinstellungen.png "Windows Audioeinstellungen")
+
+Es ist jedoch möglich, dass in weiteren Programmen, insbesondere falls für die Verwendung der Mikrofone Zusatzsoftware installiert worden ist, ähnliche Funktionen vorhanden sind, die ebenfalls deaktiviert werden müssen!

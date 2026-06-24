@@ -18,6 +18,7 @@ theme:
 
 plugins:
   - search
+  - mermaid2
 
 extra:
   generator: false
