@@ -37,7 +37,7 @@ markdown_extensions:
 nav:
   - Start: 
       - Überblick: index.md
-      - Begrifflichkeiten: user-guide/begrifflichkeiten.md
+      - Begrifflichkeiten: begrifflichkeiten.md
   - Benutzerdokumentation:
       - Überblick: user-guide/index.md      
       - Installation: user-guide/installation.md
