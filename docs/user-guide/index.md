@@ -41,7 +41,7 @@ Für Details, siehe [Kapitel Konfiguration](konfiguration.md).
 
 ### Test
 
-Vor der Veranstaltung sollte der komplette Veranstaltungsablauf mindestens einmal durchgespielt werden - **unbedingt auch einschlieslich der Lautstärkemessung mit den Mikrofonen, die während der Veranstaltung verwendet werden**.
+Vor der Veranstaltung sollte der komplette Veranstaltungsablauf mindestens einmal durchgespielt werden - **unbedingt auch einschließlich der Lautstärkemessung mit den Mikrofonen, die während der Veranstaltung verwendet werden**.
 
 Erfahrungsgemäss finden sich immer noch irgendwo kleine Eingabefehler, fehlerhafte Logos, suboptimale Einstellungen...oder es gibt Probleme mit den Mikrofonen.
 

@@ -1,17 +1,22 @@
-# Architektur und Kontext
+# Softwarearchitektur
 
-Diese Seite dient als Einstieg fuer technische Hintergruende.
+Hier geht es um technische Details der Softwarearchitektur und Entwicklungsinfrastruktur.
 
-## Empfohlene Inhalte
+## Framework/Technologie-Stack
 
-### Systemkontext
+* Die Software ist in C# geschrieben, das UI basiert auf WPF.
+* Die Software wurde ursprünglich auf Basis des Microsoft .NET Framework entwickelt, im Laufe der Zeit jedoch zuerst auf .NET 6, dann .NET 8 und mittlerweile auf .NET 10 migriert.
+* Die Lautstärkemessung erfolgt über die [NAudio](https://github.com/naudio/NAudio)-Bibliothek.
+* Die Software ist modular aufgebaut und könnte bei Bedarf um eigene Seiten erweitert werden (siehe [Plugin-Schnittstelle](#plugin-schnittstelle)).
 
-Beschreibe beteiligte Systeme, externe Abhaengigkeiten und zentrale Verantwortlichkeiten.
+## CI/CD
 
-### Kernkomponenten
+* Aus historischen Gründen befinden sich die CI/CD Pipelines nicht direkt hier bei GitHub, sondern bei Azure DevOps
 
-Liste die wichtigsten Komponenten auf und erklaere deren Verantwortung.
+## Codebasis
 
-### Wichtige Entscheidungen
+* Hier und da sieht man dem leider Quellcode an, dass einige Features unter recht grossem Zeitdruck noch kurz vor dem Kirschenmarkt implementiert wurden. Dennoch hat sich die Software als äußerst robust erwiesen und ist bislang noch nie während der Veranstaltung abgestürzt.
 
-Dokumentiere Architekturentscheidungen mit Kontext, Alternativen und Konsequenzen.
+## Komponenten
+
+## Plugin-Schnittstelle
