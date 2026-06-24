@@ -21,6 +21,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          lfs: true
+
+      - name: Verify LFS files are present
+        run: |
+          git lfs ls-files
+          # Fail early if PNG assets are still LFS pointer text files.
+          if grep -R --include='*.png' -n "^version https://git-lfs.github.com/spec/v1" docs; then
+            echo "ERROR: LFS pointer files detected in docs assets."
+            exit 1
+          fi
 
       - name: Setup Python
         uses: actions/setup-python@v6
