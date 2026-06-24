@@ -36,12 +36,16 @@ markdown_extensions:
 nav:
   - Start: index.md
   - Benutzerdokumentation:
-      - Installation: user-guide/installation.md
-      - Begrifflichkeiten: user-guide/begrifflichkeiten.md
       - Überblick: user-guide/index.md
-      - Konfiguration: user-guide/configuration.md
-      - Betrieb und FAQ: user-guide/operations.md
+      - Begrifflichkeiten: user-guide/begrifflichkeiten.md
+      - Installation: user-guide/installation.md
+      - Konfiguration: user-guide/konfiguration.md
+      - Test: user-guide/test.md
+      - Veranstaltung: user-guide/veranstaltung.md
   - Technischer Hintergrund:
       - Überblick: technical/index.md
       - Architektur und Kontext: technical/architecture.md
       - Veröffentlichungsprozess: technical/publishing.md
+  - Troubleshooting:
+      - Überblick: troubleshooting/index.md
+      - FAQs: troubleshooting/faqs.md
