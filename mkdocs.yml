@@ -1,0 +1,41 @@
+site_name: Kirschenkrönung
+site_description: Dokumentation für Anwender und technische Hintergründe
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+strict: true
+
+theme:
+  name: material
+  language: de
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Start: index.md
+  - Benutzerdokumentation:
+      - Überblick: user-guide/index.md
+      - Konfiguration: user-guide/configuration.md
+      - Betrieb und FAQ: user-guide/operations.md
+  - Technischer Hintergrund:
+      - Überblick: technical/index.md
+      - Architektur und Kontext: technical/architecture.md
+      - Veröffentlichungsprozess: technical/publishing.md
