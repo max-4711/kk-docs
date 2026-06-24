@@ -12,6 +12,19 @@ Hier geht es um technische Details der Softwarearchitektur und Entwicklungsinfra
 ## CI/CD
 
 * Aus historischen Gründen befinden sich die CI/CD Pipelines nicht direkt hier bei GitHub, sondern bei Azure DevOps
+* Es gibt zwei zentrale Branches
+    * Der `develop`-Branch für Integration und Testing
+        * Build-Pipelines für jeden Commit, Release automatisch jeden Montag um 01:00 UTC
+        * Status: Build [![Build Status](https://dev.azure.com/studio-4711/Kirschenkr%C3%B6nung/_apis/build/status/KK-APP_DEV_CI)](https://dev.azure.com/studio-4711/Kirschenkr%C3%B6nung/_build/latest?definitionId=2) / Release [![Build Status](https://vsrm.dev.azure.com/studio-4711/_apis/public/Release/badge/64a55e4a-673a-42b1-a8dc-ea6ed9ea589d/2/2)](https://dev.azure.com/studio-4711/Kirschenkrönung/Kirschenkrönung%20Team/_release?definitionId=2&_a=releases)
+    * Der `master`-Branch für fertige Releases
+        * Build-Pipelines für jeden Commit, Release manuell ausgelöst
+        * Status: Build [![Build Status](https://dev.azure.com/studio-4711/Kirschenkr%C3%B6nung/_apis/build/status/KK-APP_MASTER_CI)](https://dev.azure.com/studio-4711/Kirschenkr%C3%B6nung/_build/latest?definitionId=6) / Release [![Build Status](https://vsrm.dev.azure.com/studio-4711/_apis/public/Release/badge/64a55e4a-673a-42b1-a8dc-ea6ed9ea589d/3/3)](https://dev.azure.com/studio-4711/Kirschenkrönung/Kirschenkrönung%20Team/_release?definitionId=3&_a=releases)
+* Der Launcher bzw. Updater kann konfiguriert werden, die neueste Softwareversion vom jeweiligen Branch zu verwenden (standardmässig wird natürlich das neueste Release des `master`-Branchs verwendet)
+    * Um stattdessen ein aktuelleres Entwicklungs-/Testing-Release zu installieren, muss in der Datei `updateconfig.l4711` (im Installationsordner, also üblicherweise `%localappdata%\Kirschenkroenung\App`) in der ersten Zeile `master` zu `develop` geändert werden. 
+    * Anschliessend das Programm beenden und den Launcher erneut starten - der Rest passiert automatisch. 
+    * Analog dazu ist natürlich auch der Wechsel in die andere Richtung möglich.
+
+## Update-Infrastruktur
 
 ## Codebasis
 
@@ -19,6 +32,48 @@ Hier geht es um technische Details der Softwarearchitektur und Entwicklungsinfra
 
 ## Komponenten
 
+```plantuml
+@startuml
+left to right direction
+skinparam componentStyle rectangle
+
+component "Launcher4711" as launcher
+component "Kirschenkrönung" as app
+component "Kirschenkrönung.Library" as library
+component "LicenseManager4711" as license
+
+note bottom of launcher
+  Separates Executable.
+  Prüft auf Updates, installiert sie
+  und startet die Hauptanwendung.
+end note
+
+note bottom of app
+  Hauptanwendung mit zentraler
+  Programmlogik und kompletter UI.
+end note
+
+note bottom of library
+  Enthält einen Teil der Logik,
+  vor allem aber Schnittstellen
+  für mögliche Plugins.
+end note
+
+note bottom of license
+  Wird von der Hauptanwendung genutzt.
+  Frühere Lizenzprüfungen sind heute
+  faktisch nicht mehr aktiv.
+end note
+
+launcher --> app : startet
+app --> library : nutzt
+app --> license : Abhängigkeit
+@enduml
+```
+
+
 ## Plugin-Schnittstelle
+
+## Tests
 
 ## Historie

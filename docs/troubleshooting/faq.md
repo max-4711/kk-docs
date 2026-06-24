@@ -11,3 +11,11 @@ Technisch ist das grundsätzlich möglich, allerdings ist es bislang noch nie ge
 Es könnte sein, dass zusätzliche Schritte nötig sind (Seiten vom Typ "Titelseiten" könnten z.B. das alte Jahr enthalten und müssten zur Änderung gelöscht und neu erstellt werden). Weil aus dem Projektordner keine Dateien (wie Bilder) gelöscht werden, auch wenn sie im konfigurierten Veranstaltungsablauf nicht mehr verwendet werden, würde sich der Projektordner unweigerlich mehr und mehr aufblähen.
 
 Aus diesem Grund lautet die Empfehlung daher, den Veranstaltungsablauf lieber wieder "von vorne" zu konfigurieren.
+
+## Die Installation eines Updates schlägt immer wieder fehl, bzw. nach der Installation erscheint statt der neuen Programmversion eine Fehlermeldung
+
+Im ersten Schritt prüfen, ob im Installationsverzeichnis (also typischerweise `%localappdata%\Kirschenkroenung\App`) ein Ordner `Updatetemp` existiert. 
+
+Wenn ja, den gesamten Inhalt bis auf diesen Ordner löschen und den Inhalt aus dem `Updatetemp`-Ordner eine Ebene nach oben schieben, also dorthin, wo eben die anderen Dateien gelöscht wurden.
+
+Wenn nein, hier prüfen, ob es einen neuen kompletten Installer zum Download gibt.

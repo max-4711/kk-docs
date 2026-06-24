@@ -18,7 +18,6 @@ theme:
 
 plugins:
   - search
-  - mermaid2
 
 extra:
   generator: false
@@ -29,6 +28,8 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
+  - plantuml_markdown:
+      format: svg_inline
   - tables
   - toc:
       permalink: true

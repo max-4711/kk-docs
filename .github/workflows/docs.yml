@@ -39,6 +39,11 @@ jobs:
           python-version: '3.12'
           cache: pip
 
+      - name: Install PlantUML runtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y graphviz plantuml default-jre-headless
+
       - name: Install dependencies
         run: pip install -r requirements.txt
 

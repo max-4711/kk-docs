@@ -10,11 +10,19 @@ Einige in dieser Dokumentation und im Programm immer wieder verwendete Begriffe 
 
 Leider kann es nicht direkt mit der Wahl der Kirschenkönigin losgehen; stattdessen müssen bei der Verwendung des Programms grob diese typischen Prozessschritte durchlaufen werden:
 
-```mermaid
-flowchart LR
-	A["<b>Installation</b>"] --> B["<b>Konfiguration</b>"]
-	B --> C["<b>Test</b>"]
-	C --> D["<b>Veranstaltung</b>"]
+```plantuml
+@startuml
+left to right direction
+
+rectangle "Installation" as Installation
+rectangle "Konfiguration" as Konfiguration
+rectangle "Test" as Test
+rectangle "Veranstaltung" as Veranstaltung
+
+Installation --> Konfiguration
+Konfiguration --> Test
+Test --> Veranstaltung
+@enduml
 ```
 
 ### Installation
