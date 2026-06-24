@@ -1,6 +1,10 @@
 # Benutzerdokumentation
 
-Dieser Bereich bündelt Informationen, die für die Bedienung der Software relevant sind. Weitere zum Verständnis und bei der Fehlersuche ggfs. relevante Hintergründe sind unter [Technischer Hintergrund](../technical/index.md) beschrieben.
+Dieser Bereich bündelt Informationen, die für die Bedienung der Software relevant sind. Weitere zum Verständnis und bei der Fehlersuche ggfs. relevante Hintergründe sind unter [Technischer Hintergrund](../technical/index.md) bzw. [Troubleshooting](../troubleshooting/index.md) beschrieben.
+
+## Begrifflichkeiten
+
+Einige in dieser Dokumentation und im Programm immer wieder verwendete Begriffe sind im Kapitel [Begrifflichkeiten](begrifflichkeiten.md) beschrieben und möglicherweise für das Verständnis hilfreich.
 
 ## Phasen
 

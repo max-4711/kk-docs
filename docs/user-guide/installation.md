@@ -5,10 +5,12 @@
 ### Grundfunktionen
 
 Die Erstversion der Software wurde mit der folgenden Systemkonfiguration mehrfach problemlos eingesetzt:
+
 * 8 GB RAM oder mehr
 * Dual-Core-CPU mit 1,9 GHz oder schneller (vgl. Intel Core i5-4300U)
 
 Im Laufe der Zeit wurden jedoch zusätzliche Features implementiert, welche Einfluss auf die Systemanforderungen haben könnten. Die Empfehlung, basierend auf der zuletzt verwendeten Systemkonfiguration, wäre daher eher diese:
+
 * 32 GB RAM oder mehr
 * Hexa-Core-CPU mit 2,6 GHz oder schneller (vgl. Intel Core i7-9850H)
 * Windows 11 25H2
@@ -45,7 +47,7 @@ Grundsätzlich ist eine Installation zur Ausführung von Kirschenkrönung nicht 
 
 Das Installationsprogramm kann unter folgender Adresse heruntergeladen werden: [https://go.studio-4711.com/kk-download](https://go.studio-4711.com/kk-download)
 
-![](images/001-installer.png "Installationsprogramm")
+![Installationsprogramm](images/001-installer.png)
 
 Das Installationsprogramm entpackt alle für die Ausführung benötigten Datein in das Verzeichnis `%localappdata%\Kirschenkroenung\App`, legt eine Desktop-Verknüpfung an und startet das Programm. Administratorrechte werden _nicht_ benötigt.
 
@@ -65,6 +67,6 @@ Unter Windows 11 findet sich entsprechende Einstellungen unter "Einstellungen" >
 
 Darüber hinaus sollte die Lautstärke/Empfindlichkeit des Mikrofons auf 100% eingestellt werden (im zuvor bereits erwähnten Einstellungsmenü unter "Einganslautstärke").
 
-![](images/002-windows-audioeinstellungen.png "Windows Audioeinstellungen")
+![Windows Audioeinstellungen](images/002-windows-audioeinstellungen.png)
 
 Es ist jedoch möglich, dass in weiteren Programmen, insbesondere falls für die Verwendung der Mikrofone Zusatzsoftware installiert worden ist, ähnliche Funktionen vorhanden sind, die ebenfalls deaktiviert werden müssen!
