@@ -20,3 +20,5 @@ Hier geht es um technische Details der Softwarearchitektur und Entwicklungsinfra
 ## Komponenten
 
 ## Plugin-Schnittstelle
+
+## Historie

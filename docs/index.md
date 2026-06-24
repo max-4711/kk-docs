@@ -9,10 +9,14 @@ Der vollständige Quellcode der Software befindet sich im Repository [max-4711/k
 
 Auf formlose Anfrage (entweder über die [Stadt Gladenbach](https://www.gladenbach.de/) oder die Kontaktoptionen des GitHub-Profils [max-4711](https://github.com/max-4711)) kann jedoch gerne Zugriff auf den Quellcode gewährt werden.
 
-# Kirschenkrönung Dokumentation
+# Dokumentation
 
 Diese Dokumentation ist in drei Perspektiven aufgeteilt:
 
 - **Benutzerdokumentation** für alle Informationen, die für die Bedienung der Software direkt relevant sind.
 - **Technischer Hintergrund** für technischen Kontext, Detailinformationen und mehr - nicht direkt für die Steuerung der Software kritisch, aber für das Verständnis möglicherweise hilfreich.
 - **Troubleshooting** spezifisch für das Suchen und Beheben von Problemen
+
+## Begrifflichkeiten
+
+Einige in dieser Dokumentation und im Programm immer wieder verwendete Begriffe sind im Kapitel [Begrifflichkeiten](../begrifflichkeiten.md) beschrieben und möglicherweise für das Verständnis hilfreich.

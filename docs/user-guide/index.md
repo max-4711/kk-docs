@@ -4,7 +4,7 @@ Dieser Bereich bündelt Informationen, die für die Bedienung der Software relev
 
 ## Begrifflichkeiten
 
-Einige in dieser Dokumentation und im Programm immer wieder verwendete Begriffe sind im Kapitel [Begrifflichkeiten](begrifflichkeiten.md) beschrieben und möglicherweise für das Verständnis hilfreich.
+Einige in dieser Dokumentation und im Programm immer wieder verwendete Begriffe sind im Kapitel [Begrifflichkeiten](../begrifflichkeiten.md) beschrieben und möglicherweise für das Verständnis hilfreich.
 
 ## Phasen
 

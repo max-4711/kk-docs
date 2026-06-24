@@ -34,10 +34,11 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Start: index.md
-  - Benutzerdokumentation:
-      - Überblick: user-guide/index.md
+  - Start: 
+      - Überblick: index.md
       - Begrifflichkeiten: user-guide/begrifflichkeiten.md
+  - Benutzerdokumentation:
+      - Überblick: user-guide/index.md      
       - Installation: user-guide/installation.md
       - Konfiguration: user-guide/konfiguration.md
       - Test: user-guide/test.md
