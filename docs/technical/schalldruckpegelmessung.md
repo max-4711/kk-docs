@@ -146,7 +146,7 @@ Getreu dem Motto "was schiefgehen kann, wird schiefgehen" hier eine Auflistung v
 3. **Mikrofone konsistent positionieren** (Abstand/Ausrichtung beibehalten).
 4. **Kalibrierung pro Mikrofon durchführen** und bei Hardwarewechsel wiederholen.
 5. Bei Warnung „Mikrofonstörung“ Messung **prüfen und ggf. wiederholen**.
-6. Bei Kalibrierung externe Referenzmessung sauber durchführen (typisch Zielbereich ca. 80–90 dB(A) laut Assistent).
+6. Bei Kalibrierung externe Referenzmessung sauber durchführen (am besten im typischen Zielbereich, für die Messung im Festzelt also ca. 80–90 dB(A)).
 
 ---
 
@@ -192,10 +192,11 @@ Die Kalibrierung erfolgt mikrofonspezifisch in mehreren Schritten:
 > ℹ️ **„Guter“ vs. „schlechter“ Frequenzgang**
 >
 > Vereinfacht betrachtet:
+
 > - **Gut für Messzwecke:** relativ glatt/gleichmäßig (keine extremen Spitzen und Einbrüche).
 > - **Ungünstig:** starke Wellen, tiefe Einbrüche oder hohe Peaks in Teilbereichen.
 > 
-> Wichtig: „Gut“ bedeutet hier **messtechnisch neutral**, nicht unbedingt „klingt schön“. Ein Mikrofon kann subjektiv angenehm klingen, aber für Pegelmessungen dennoch ungeeignet sein.
+> Wichtig: „Gut“ bedeutet hier *messtechnisch neutral*, nicht unbedingt „klingt schön“. Ein Mikrofon kann subjektiv angenehm klingen, aber für Pegelmessungen dennoch ungeeignet sein.
 >
 > In der Visualisierung der ermittelten Korrekturfaktoren am Ende des Kalibrierungsassistenten ist ein Mikrofon je besser, je horizontaler und gerader die angezeigte Linie verläuft. Dies gilt jedoch nur, wenn die Analyse des Frequenzgangs während der Kalibrierung aktiviert wurde - andernfalls ist die Linie der Korrekturfaktoren immer gerade und horizontal verlaufend. (In der Visualisierung wird genau genommen auch nicht der eigentliche Frequenzgang, sondern eben die Korrekturfaktoren, um ihn rechnerisch zu neutralisieren, angezeigt.)
 
@@ -205,8 +206,8 @@ Die Kalibrierung erfolgt mikrofonspezifisch in mehreren Schritten:
 - Audioeingänge werden über Windows‑Capture‑Geräte (WASAPI, Shared Mode) verwendet.
 - Es können mehrere Mikrofone parallel ausgewählt werden.
 - Unterstützte Sampleformate:
-  - PCM: 8/16/24/32 Bit
-  - IEEE Float: 32/64 Bit
+        - PCM: 8/16/24/32 Bit
+        - IEEE Float: 32/64 Bit
 - Falls ein Format nicht direkt geeignet ist, wird ein Fallback auf IEEE‑Float versucht.
 
 ### 2. Zeit‑ in Frequenzbereich (FFT)
@@ -235,9 +236,11 @@ Die Magnituden-Summen-basierte Berechnung ist jedoch nur aus historischen Gründ
 
 ### 5. Mittelung
 Die Anwendung mittelt
+
 - kanalübergreifend,
 - geräteübergreifend,
 - und über die Zeit
+
 mit einer **akustisch korrekten logarithmischen Mittelung** (nicht einfach arithmetisch auf dB‑Werten).
 
 > ℹ️ **Warum dB nicht direkt arithmetisch mitteln?**
@@ -265,6 +268,8 @@ mit einer **akustisch korrekten logarithmischen Mittelung** (nicht einfach arith
 > Beispiel: 44,1 kHz Abtastrate → bis ca. 22,05 kHz erfassbar.
 > Kurz: Höhere Abtastrate kann mehr Frequenzinhalt erfassen, erzeugt aber auch mehr Daten.
 
+Für jeden in der Visualisierung des Schalldruckpegels (während der Veranstaltung) eingezeichneten Datenpunkt wird das Mittel von drei (ggfs. bereits von verschiedenen Kanäle und Mikrofone gemittelten) Messwerten verwendet. Bei beispielsweise einer Abtastrate von 44.1 kHz ergeben sich dadurch ca. 3,6 in der Visualisierung eingezeichnete Datenpunkte pro Sekunde.
+
 ## Zusammengefasst: Warum misst das Programm, wie es misst?
 
 - **FFT‑basierte Auswertung** erlaubt frequenzabhängige Gewichtung und Kalibrierfilter.
@@ -283,7 +288,7 @@ start
 :Blockweise Samples sammeln;
 :FFT (N=4096, Hamming);
 :Magnitude pro Frequenzbin;
-:16 Hz .. 20159 Hz auswählen;
+:Über Frequenz iterieren (16 Hz .. 20159 Hz);
 :A-Bewertung anwenden;
 if (Kalibrierfilter vorhanden?) then (ja)
   :Gerätekorrektur anwenden;

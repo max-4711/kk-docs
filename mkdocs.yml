@@ -47,8 +47,7 @@ nav:
   - Technischer Hintergrund:
       - Überblick: technical/index.md
       - Schalldruckpegelmessung: technical/schalldruckpegelmessung.md
-      - Architektur und Kontext: technical/architecture.md
-      - Veröffentlichungsprozess: technical/publishing.md
+      - Softwarearchitektur: technical/architecture.md
   - Troubleshooting:
       - Überblick: troubleshooting/index.md
       - FAQs: troubleshooting/faq.md

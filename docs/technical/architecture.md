@@ -85,6 +85,7 @@ app --> license : Abhängigkeit
 ## Historie
 
 Für Software-Design relevante Ereignisse:
+
 * 2017 wurde mit der Entwicklung des Programms begonnen (initial mit .NET 4.7)
 * 2018 wurde das entworfene und prototypisch implementierte Messverfahren fachkundig reviewed und die Software kam erstmalig zum Einsatz
 * 2018-2022 wurde das Programm um unzählige Features ergänzt, neben einer schier endlosen Zahl an "Kleinigkeiten" auch 
@@ -97,6 +98,7 @@ Für Software-Design relevante Ereignisse:
 
 
 Modernisierungen der Codebasis:
+
 * 2020 Migration auf .NET 5
 * 2022 Migration auf .NET 6
 * 2024 Migration auf .NET 8
