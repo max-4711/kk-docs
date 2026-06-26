@@ -44,6 +44,7 @@ Zusätzlich kann pro Mikrofon eine Kalibrierung hinterlegt bzw. ermittelt werden
 > 
 > Genau diese Mischung trennt die Anwendung rechnerisch in ihre Einzelteile auf (via FFT), um anschließend gezielt zu bewerten - denn das menschliche Ohr nimmt nicht alle Frequenzen gleich wahr.
 
+
 > ℹ️ **FFT: Fast Fourier Transform**
 >
 > Die FFT ist ein mathematisches Verfahren, das ein Signal aus dem Zeitbereich in den Frequenzbereich überführt. Vereinfacht gesagt: Statt „Wie verläuft das Signal über die Zeit?“ erhält man „Welche Frequenzen sind enthalten und wie stark?“.
@@ -51,6 +52,7 @@ Zusätzlich kann pro Mikrofon eine Kalibrierung hinterlegt bzw. ermittelt werden
 > Warum das wichtig ist:
 > - Nur im Frequenzbereich kann die A‑Bewertung sauber frequenzabhängig angewendet werden.
 > - Ebenso kann eine frequenzabhängige Mikrofon‑Kalibrierung nur dort korrekt wirken.
+
 
 > ℹ️ **(A‑)Bewertung eines Audiosignals**
 >
@@ -71,6 +73,7 @@ Zusätzlich kann pro Mikrofon eine Kalibrierung hinterlegt bzw. ermittelt werden
 > Ein rein physikalischer Pegel hingegen (ohne Bewertung) behandelt alle Frequenzen gleich. Menschen hören aber nicht alle Frequenzen gleich laut. Deshalb kann ein unbewerteter Messwert (z. B. dB(Z)) von der subjektiv empfundenen Lautstärke deutlich abweichen.
 > Die A-Bewertung macht den Messwert also wahrnehmungsnäher und damit für praktische Lautstärke-/Lärmbewertung meist aussagekräftiger und ist in vielen praxisnahen Lärmanwendungen üblich.
 
+
 > ℹ️ **Kalibrierung**
 >
 > Kalibrierung bedeutet hier: Die Abweichung zwischen
@@ -88,6 +91,7 @@ Zusätzlich kann pro Mikrofon eine Kalibrierung hinterlegt bzw. ermittelt werden
 >
 > Trotz Kalibrierung sollten daher immer nur geeignete Mikrofone verwendet werden - und möglichst identische, falls die Messung mit mehreren gleichzeitig ausgeführt wird.
 
+
 > ℹ️ **Frequenzgang**
 >
 > Der Frequenzgang beschreibt, wie stark ein Mikrofon auf verschiedene Frequenzen reagiert (gilt umgekehrt auch für Lautsprecher bei der Wiedergabe).
@@ -97,7 +101,8 @@ Zusätzlich kann pro Mikrofon eine Kalibrierung hinterlegt bzw. ermittelt werden
 >
 > Folge in der Praxis: Das Messgerät „hört“ dann nicht neutral, und Pegel können je nach Klangspektrum systematisch verzerrt sein.
 
-> ⚠️ **Audio"verbesserungen"**
+
+> ⚠️ **"Audioverbesserungen"**
 >
 > Windows (und auch diverse Drittanbieterprogramme) enthalten Funktionen, um Rauschunterdrückung, oder allgemein Audioverbesserungen, -optimierungen oder ähnlich auf Audiosignale anzuwenden.
 > 
@@ -154,8 +159,9 @@ Die Kalibrierung erfolgt mikrofonspezifisch in zwei Schritten:
    - Das Mikrofon misst intern; parallel misst ein externes Referenzgerät.
    - Der Referenzwert (dB(A)) wird manuell eingegeben.
 
-> ℹ️ Weißes Rauschen?
-> **Weißes Rauschen** ist ein Signal, das viele Frequenzen gleichzeitig und in gleicher Stärke enthält.
+> ℹ️ **Weißes Rauschen**
+>
+> Weißes Rauschen ist ein Signal, das viele Frequenzen gleichzeitig und in gleicher Stärke enthält.
 > 
 > Vereinfacht gesagt:
 > - Es klingt wie ein gleichmäßiges „Rauschen“.
@@ -181,6 +187,7 @@ Hinweis für Interessierte: Je nach exakter Definition kann „gleichmäßig“ 
 > Eine Kalibrierung gilt immer nur für das konkrete Mikrofon (bzw. die konkrete Signalkette), mit der sie erstellt wurde.
 > 
 > Falls Mikrofon, Audiointerface o.Ä. einen Regler für die Lautstärke des Eingangssignals haben (und das gilt auch für den in Windows virtuell vorhandenen Regler für die Eingangslautstärke!), darf dieser nach der Kalibrierung nicht mehr verstellt werden - andernfalls ist die Kalibirierung ungültig!
+
 
 > ℹ️ **„Guter“ vs. „schlechter“ Frequenzgang**
 >
@@ -236,6 +243,7 @@ mit einer **akustisch korrekten logarithmischen Mittelung** (nicht einfach arith
 > ℹ️ **Warum dB nicht direkt arithmetisch mitteln?**
 >
 > Dezibel sind logarithmisch. Für korrekte Mittelwerte werden dB‑Werte zuerst in lineare Größen umgerechnet, dort gemittelt und danach wieder in dB zurückgeführt.
+
 
 > ⚠️ **Abtastraten bei Messungen mit mehreren Mikrofonen**
 > Falls Messungen mit mehreren Mikrofonen gleichzeitig ausgeführt werden, muss vom Anwender sichergestellt werden, dass diese Signale in identischer Abtastrate liefern (bzw., wie bereits im Abschnitt der [Grundlagen](#grundlagen) erwähnt, idealerweise ohnehin identische Mikrofone).
@@ -296,8 +304,6 @@ stop
 ---
 
 ## Weiterführende Quellen
-- Sound pressure level (Grundlagen): https://en.wikipedia.org/wiki/Sound_pressure#Sound_pressure_level
-- A-weighting: https://en.wikipedia.org/wiki/A-weighting
-- Fast Fourier Transform (FFT): https://en.wikipedia.org/wiki/Fast_Fourier_transform
-- IEC 61672 (Schallpegelmesser, Normfamilie): https://webstore.iec.ch/publication/5708
-
+- Schalldruckpegel (Grundlagen): [Wikipedia: Schalldruckpegel](https://en.wikipedia.org/wiki/Sound_pressure#Sound_pressure_level)
+- A-bewerteter Schalldruckpegel: [Wikipedia: A-Bewertung](https://en.wikipedia.org/wiki/A-weighting)
+- Schnelle Fourier-Transformation: [Wikipedia: Fast Fourier Transform (FFT)](https://en.wikipedia.org/wiki/Fast_Fourier_transform)
