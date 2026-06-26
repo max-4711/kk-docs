@@ -152,9 +152,9 @@ Getreu dem Motto "was schiefgehen kann, wird schiefgehen" hier eine Auflistung v
 
 ## Kalibrierung: Ablauf und Bedeutung
 
-Die Kalibrierung erfolgt mikrofonspezifisch in zwei Schritten:
+Die Kalibrierung erfolgt mikrofonspezifisch in mehreren Schritten:
 
-1. **Kalibrier-Messung**
+### 1. Kalibrier-Messung
    - Weißes Rauschen wird wiedergegeben (oder externe Quelle genutzt).
    - Das Mikrofon misst intern; parallel misst ein externes Referenzgerät.
    - Der Referenzwert (dB(A)) wird manuell eingegeben.
@@ -167,18 +167,18 @@ Die Kalibrierung erfolgt mikrofonspezifisch in zwei Schritten:
 > - Es klingt wie ein gleichmäßiges „Rauschen“.
 > - Im Kalibrierkontext ist es nützlich, weil viele Frequenzbereiche gleichzeitig angeregt werden.
 > - Dadurch kann man erkennen, ob ein Mikrofon bestimmte Frequenzen über- oder unterbetont.
+>
+>Je nach exakter Definition kann „gleichmäßig“ auf unterschiedliche Skalen bezogen sein. Für das Kalibrierungsprozedere in dieser Anwendung ist wichtig, dass ein breitbandiges Testsignal verwendet wird.
 
-Hinweis für Interessierte: Je nach exakter Definition kann „gleichmäßig“ auf unterschiedliche Skalen bezogen sein. Für die praktische Kalibrieridee in dieser Anwendung ist wichtig, dass ein breitbandiges Testsignal verwendet wird.
-
-2. **Berechnung der Korrekturkoeffizienten**
+### 2. Berechnung der Korrekturkoeffizienten
    - Ohne Frequenzanalyse: ein globaler Skalierungsfaktor (der für alle Frequenzen gleichermaßen gilt; also sozusagen wie ein Lautstärkeregler).
    - Mit Frequenzanalyse: frequenzabhängige Korrekturkurve + Gesamtskalierung.
 
-3. **Testmessung**
+### 3. Testmessung
    - Plausibilitätsprüfung der kalibrierten Messkette.
    - Bei auffälligen Korrekturwerten (zu klein/zu groß/zu stark schwankend) warnt die Anwendung.
 
-4. **Speicherung**
+### 4. Speicherung
    - Speicherung pro Mikrofon‑ID in `%AppData%/Kirschenkroenung/MicCalib/filters.json`.
    - Visualisierung der ermittelten Korrekturfaktoren
 
@@ -201,7 +201,7 @@ Hinweis für Interessierte: Je nach exakter Definition kann „gleichmäßig“ 
 
 ## Wie läuft die Messung technisch ab?
 
-### 1) Erfassung der Eingangssignale
+### 1. Erfassung der Eingangssignale
 - Audioeingänge werden über Windows‑Capture‑Geräte (WASAPI, Shared Mode) verwendet.
 - Es können mehrere Mikrofone parallel ausgewählt werden.
 - Unterstützte Sampleformate:
@@ -209,18 +209,18 @@ Hinweis für Interessierte: Je nach exakter Definition kann „gleichmäßig“ 
   - IEEE Float: 32/64 Bit
 - Falls ein Format nicht direkt geeignet ist, wird ein Fallback auf IEEE‑Float versucht.
 
-### 2) Zeit‑ in Frequenzbereich (FFT)
+### 2. Zeit‑ in Frequenzbereich (FFT)
 - Pro Kanal werden Blöcke mit **FFT‑Länge 4096** ausgewertet.
 - Es wird ein **Hamming‑Fenster** verwendet, um Spektralleckeffekte zu reduzieren.
 - Aus den FFT‑Bins werden Beträge (Magnituden) gebildet.
 - Berücksichtigt wird der Frequenzbereich ca. **16 Hz bis 20159 Hz**.
 
-### 3) Frequenzgewichtung (A‑Bewertung)
+### 3. Frequenzgewichtung (A‑Bewertung)
 Jeder Frequenzanteil wird mit dem jeweiligen Faktor gemäß der A‑Bewertung multipliziert. Optional wird zusätzlich ein mikrofonspezifischer Korrekturfaktor aus der Kalibrierung angewendet.
 
 In dieser Anwendung ist dB(A) als primärer Modus gewählt, da es für die vorgesehene Nutzung ein sinnvoller Standard ist (schließlich sollten die zahlenmäßig ausgedrückten Messwerte dem menschlichen Empfinden entsprechen).
 
-### 4) Pegelbildung
+### 4. Pegelbildung
 Die Anwendung unterstützt zwei Rechenmodi:
 - **Energie‑basiert** (bevorzugt): Summe der quadrierten gewichteten Beträge, anschließend
   \[
@@ -233,7 +233,7 @@ Die Anwendung unterstützt zwei Rechenmodi:
 
 Die Magnituden-Summen-basierte Berechnung ist jedoch nur aus historischen Gründen im Programm enthalten und kann über das Feature-Flag `4711_LOUDNESSMEASURING_COMPUTATION_MODE` aktiviert werden. Andernfalls bzw. standardmäßig wird die (physikalisch korrekte) Energie-basierte Berechnung verwendet (die im Ergebnis zu etwas geringeren Zahlen führt).
 
-### 5) Mittelung
+### 5. Mittelung
 Die Anwendung mittelt
 - kanalübergreifend,
 - geräteübergreifend,
