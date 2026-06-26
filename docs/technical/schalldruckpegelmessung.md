@@ -206,8 +206,8 @@ Die Kalibrierung erfolgt mikrofonspezifisch in mehreren Schritten:
 - Audioeingänge werden über Windows‑Capture‑Geräte (WASAPI, Shared Mode) verwendet.
 - Es können mehrere Mikrofone parallel ausgewählt werden.
 - Unterstützte Sampleformate:
-        - PCM: 8/16/24/32 Bit
-        - IEEE Float: 32/64 Bit
+    - PCM: 8/16/24/32 Bit
+    - IEEE Float: 32/64 Bit
 - Falls ein Format nicht direkt geeignet ist, wird ein Fallback auf IEEE‑Float versucht.
 
 ### 2. Zeit‑ in Frequenzbereich (FFT)
