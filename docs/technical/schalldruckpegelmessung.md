@@ -61,6 +61,7 @@ Zusätzlich kann pro Mikrofon eine Kalibrierung hinterlegt bzw. ermittelt werden
 > Grob gesagt(!) werden bei einer Bewertung die Stärken der einzelnen im Audiosignal enthaltenen Frequenzen nach einer standardisierten Formel aufsummiert. Das Ergebnis ist der bewertete Schalldruckpegel. Abhängig von der genauen Bewertung können unterschiedliche Frequenzen unterschiedlich stark gewichtet werden.
 >
 > Gängige, standardisierte Arten der Bewertung sind die folgenden:
+>
 > * **dB(A)** → wenn es um wahrgenommene Lautstärke/Lärmbelastung für Menschen geht
 (Alltag, Arbeitsschutz, Umgebungsgeräusche, „wie laut wirkt es?“).
 > * **dB(C)** → wenn tieffrequente Anteile oder hohe Pegel stärker berücksichtigt werden sollen
