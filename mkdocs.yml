@@ -46,6 +46,7 @@ nav:
       - Veranstaltung: user-guide/veranstaltung.md
   - Technischer Hintergrund:
       - Überblick: technical/index.md
+      - Schalldruckpegelmessung: technical/schalldruckpegelmessung.md
       - Architektur und Kontext: technical/architecture.md
       - Veröffentlichungsprozess: technical/publishing.md
   - Troubleshooting:

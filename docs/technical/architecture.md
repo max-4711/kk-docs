@@ -26,6 +26,12 @@ Hier geht es um technische Details der Softwarearchitektur und Entwicklungsinfra
 
 ## Update-Infrastruktur
 
+* Die CI/CD-Pipelines kopieren die veröffentlichten Artefakte auf einen öffentlich erreichbaren Server.
+* Der im Programm enthaltene Launcher bzw. Updater kontaktiert diesen Server und prüft, welche die für den jeweils konfigurierten Branch die neueste verfügbare Programmrevision ist. Die betreffenden URLs sind:
+  * [https://api.studio-4711.com/UpdateCheck/master/Updatecheck.php](https://api.studio-4711.com/UpdateCheck/master/Updatecheck.php)
+  * [https://api.studio-4711.com/UpdateCheck/develop/Updatecheck.php](https://api.studio-4711.com/UpdateCheck/develop/Updatecheck.php)
+* Ist die dort verlinkte Revision eine andere als die gegenwärtig lokal vorhandene, wird sie heruntergeladen und installiert.
+
 ## Codebasis
 
 * Hier und da sieht man dem leider Quellcode an, dass einige Features unter recht grossem Zeitdruck noch kurz vor dem Kirschenmarkt implementiert wurden. Dennoch hat sich die Software als äußerst robust erwiesen und ist bislang noch nie während der Veranstaltung abgestürzt.
@@ -77,3 +83,21 @@ app --> license : Abhängigkeit
 ## Tests
 
 ## Historie
+
+Für Software-Design relevante Ereignisse:
+* 2017 wurde mit der Entwicklung des Programms begonnen (initial mit .NET 4.7)
+* 2018 wurde das entworfene und prototypisch implementierte Messverfahren fachkundig reviewed und die Software kam erstmalig zum Einsatz
+* 2018-2022 wurde das Programm um unzählige Features ergänzt, neben einer schier endlosen Zahl an "Kleinigkeiten" auch 
+    * die Live-Anzeige von Instagram-Bildern zu wählbaren Hashtags
+    * die Fernsteuerung der Software über ein Web-Interface (z.B. von einem iPad aus) 
+    * der Kalibrierungsassistent zur Verbesserung der Messgenauigkeit
+    * der Auto-Updater
+* 2023 rückte die Reduktion des (bei einigen Features erheblichen!) Wartungsaufwands der Software in den Fokus, weswegen in den folgenden Jahren selten genutze Features mit zugleich hohem Wartungsaufwand wieder entfernt wurden (Instagram-Bilder, API und Web-Interface zur Fernsteuerung, Mechanismen für mögliche Lizenzprüfung)
+* 2026 Review und Korrektur diverser dabei gefundener Fehler mit Claude Opus 4.8
+
+
+Modernisierungen der Codebasis:
+* 2020 Migration auf .NET 5
+* 2022 Migration auf .NET 6
+* 2024 Migration auf .NET 8
+* 2026 Migration auf .NET 10
