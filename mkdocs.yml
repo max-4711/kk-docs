@@ -42,11 +42,14 @@ nav:
       - Überblick: user-guide/index.md      
       - Installation: user-guide/installation.md
       - Konfiguration: user-guide/konfiguration.md
-      - Seiten im Detail: user-guide/einzelseiten.md
+      - Konfiguration einzelner Seiten: user-guide/konfiguration-einzelseiten.md
+      - Mikrofonkalibrierung: user-guide/konfiguration-kalibrierung.md
       - Test: user-guide/test.md
       - Veranstaltung: user-guide/veranstaltung.md
-  - Technischer Hintergrund:
+  - Expertenwissen:
       - Überblick: technical/index.md
+      - Stretch-Optionen für Bilder: technical/stretch-optionen.md
+      - Punktevergabe: technical/punktevergabe.md
       - Schalldruckpegelmessung: technical/schalldruckpegelmessung.md
       - Softwarearchitektur: technical/architecture.md
   - Troubleshooting:

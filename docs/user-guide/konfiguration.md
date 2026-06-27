@@ -1,5 +1,9 @@
 # Konfiguration
 
+## Begrifflichkeiten
+
+Einige in dieser Dokumentation und im Programm immer wieder verwendete Begriffe sind im Kapitel [Begrifflichkeiten](../begrifflichkeiten.md) beschrieben und möglicherweise für das Verständnis hilfreich.
+
 ## Projekt erstellen/öffnen
 
 Nach dem Programmstart muss zunächst für die entsprechende Veranstaltung ein neues Projekt erstellt oder ein bereits existierendes geöffnet werden. Dies geht über die Menüleiste am oberen Rand des Fensters: "Datei" > "Neu"/"Öffnen". In beiden Fällen muss ein Ordner angegeben werden, in dem die zugehörigen Dateien abgelegt werden, bzw. aus dem sie gelesen werden.
@@ -63,7 +67,6 @@ Ein Bilder-Pool kann über den Button "Bilder-Pool löschen" natürlich auch wie
 
 Etwas erklärungsbedürftig ist schliesslich noch die Auswahloption "Der Bilder-Pool besteht _nur aus den ausgewählten Bildern._" bzw. "Der Bilder-Pool besteht _aus allen verfügbaren außer den ausgewählten Bildern._". Die Einstellung kann in den meisten Fällen einfach ignoriert werden - bei Auswahl der zweiten Option wird die Auswahl-Logik umgekehrt und es sind anschliessend alle Bilder, für die KEIN Haken gesetzt wurde, Teil des Bilder-Pools. Der Ursprung dieser Einstellung liegt in anderen Typen von Bilder-Pools, die in früheren Programmversionen vorhanden waren und ggfs. dynamisch ihren Inhalt verändern konnten (so dass hier dann sozusagen eine "Sperrung" von Bildern möglich war).
 
-
 ## Ablauf konfigurieren
 
 Der grösste Teil der Vorbereitung ist die Konfiguration des hinterlegten Wahlablaufs.
@@ -76,9 +79,18 @@ Die meisten Seiten können über diverse Einstellungen angepasst werden bzw. erl
 
 Seiten können auch innerhalb des Wahlablaufs beliebig verschoben werden. Das Entfernen ist über einen Rechtsklick auf die betreffende Seite und anschliessenden Klick auf "Entfernen" möglich.
 
-
-### Seiten hinzufügen/verschieben
-
-### Seiten konfigurieren
+Eine detaillierte Übersicht über die einzelnen Seitentypen und ihre Konfigurationsoptionen liefert das Kapitel [Konfiguration einzelner Seiten](konfiguration-einzelseiten.md).
 
 ## Lautstärkemessung vorbereiten
+
+Um die Lautstärkemessung vorzubereiten, sollte zunächst eine Kalibrierung ausgeführt werden und anschliessend eine Testmessung ausgeführt werden.
+
+Das entsprechende Menü kann über die Menüleiste "Plugins" > "Lautstärkemessung" > "Einstellungen" geöffnet werden.
+
+![Einstellungen der Lautstärkemessung](images/009-einstellungen-lautstärkemessung.png)
+
+Der Kalibrierungs-Assistent, der Schrittweise durch die Mikrofonkalibrierung führt, kann über den Button "Kalibrierungs-Assistent starten" erreicht werden. Der Button "Kalibrierung zurücksetzen" löscht die bei der Kalibrierung ermittelten Korrekturfaktoren für _alle_ Mikrofone bzw. Signalquellen.
+
+Eine Test-Messung kann, nachdem in der Auflistung der verfügbaren Mikrofone darüber das/die gewünschte(n) Mikrofon(e) bzw. Signalquelle(n) durch das Setzen eines Hakens ausgewählt wurde(n), über den Button "Test-Messung ausführen" direkt gestartet werden.
+
+Der Ablauf der Kalibrierung ist detailliert beschrieben im Kapitel [Kalibrierung](konfiguration-kalibrierung.md).

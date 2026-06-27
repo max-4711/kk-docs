@@ -1,6 +1,10 @@
 # Installation
 
+Dieses Kapitel gibt einen Überblick über die erforderlichen Schritte, die vor dem Start der Software ausgeführt werden müssen.
+
 ## Systemanforderungen
+
+Die durch die Software gestellten Systemanforderungen sind moderat und sollten durch aktuelle, handelsübliche Laptops erfüllt werden. Dennoch nachfolgend auch einige Anmerkungen zu Erfahrungen aus der Praxis.
 
 ### Grundfunktionen
 

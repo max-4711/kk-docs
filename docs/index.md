@@ -14,7 +14,7 @@ Auf formlose Anfrage (entweder über die [Stadt Gladenbach](https://www.gladenba
 Diese Dokumentation ist in drei Perspektiven aufgeteilt:
 
 - **Benutzerdokumentation** für alle Informationen, die für die Bedienung der Software direkt relevant sind.
-- **Technischer Hintergrund** für technischen Kontext, Detailinformationen und mehr - nicht direkt für die Steuerung der Software kritisch, aber für das Verständnis möglicherweise hilfreich.
+- **Expertenwissen** für Detailinformationen, Hintergrundinformationen, technischen Kontext und mehr - nicht direkt für die Steuerung der Software kritisch, aber für das Verständnis hilfreich.
 - **Troubleshooting** spezifisch für das Suchen und Beheben von Problemen
 
 ## Begrifflichkeiten
