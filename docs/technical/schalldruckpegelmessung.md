@@ -254,7 +254,7 @@ mit einer **akustisch korrekten logarithmischen Mittelung** (nicht einfach arith
 > 
 > Der Grund ist, dass die Verarbeitung der Audiosamples von den verschiedenen Geräten vom Programm nicht synchronisiert wird und daher auch die Bildung des Durchschnitts bei Signalen unterschiedlicher Abtastraten nicht konsistent bzw. korrekt wäre.
 
-> ℹ️ Abtastrate
+> ℹ️ **Abtastrate**
 >
 > Die Abtastrate (Sampling Rate) sagt, wie oft pro Sekunde ein analoges Audiosignal digital gemessen wird.
 > 

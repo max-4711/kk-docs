@@ -91,6 +91,6 @@ Das entsprechende Menü kann über die Menüleiste "Plugins" > "Lautstärkemessu
 
 Der Kalibrierungs-Assistent, der Schrittweise durch die Mikrofonkalibrierung führt, kann über den Button "Kalibrierungs-Assistent starten" erreicht werden. Der Button "Kalibrierung zurücksetzen" löscht die bei der Kalibrierung ermittelten Korrekturfaktoren für _alle_ Mikrofone bzw. Signalquellen.
 
-Eine Test-Messung kann, nachdem in der Auflistung der verfügbaren Mikrofone darüber das/die gewünschte(n) Mikrofon(e) bzw. Signalquelle(n) durch das Setzen eines Hakens ausgewählt wurde(n), über den Button "Test-Messung ausführen" direkt gestartet werden.
+Eine Test-Messung kann, nachdem in der Auflistung der verfügbaren Mikrofone darüber das/die gewünschte(n) Mikrofon(e) bzw. Signalquelle(n) durch das Setzen eines Hakens ausgewählt wurde(n), über den Button "Test-Messung ausführen" direkt gestartet werden. Wichtig: Die hier getroffene Auswahl der Mikrofone bzw. Signalquellen gilt nicht nur für die Testmessung, sondern wird für alle Messungen verwendet, auch die "richtigen" während der Veranstaltung!
 
 Der Ablauf der Kalibrierung ist detailliert beschrieben im Kapitel [Kalibrierung](konfiguration-kalibrierung.md).
