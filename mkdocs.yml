@@ -42,6 +42,7 @@ nav:
       - Überblick: user-guide/index.md      
       - Installation: user-guide/installation.md
       - Konfiguration: user-guide/konfiguration.md
+      - Seiten im Detail: user-guide/einzelseiten.md
       - Test: user-guide/test.md
       - Veranstaltung: user-guide/veranstaltung.md
   - Technischer Hintergrund:
