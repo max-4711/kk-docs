@@ -216,7 +216,25 @@ In der Administrationsansicht wird eine Liste aller Bilder im gewählten Pool an
 
 ## Webseite anzeigen
 
+Diese Seite erlaubt das Anzeigen einer beliebigen Webseite. Dementsprechend gibt es als Einstellungsmöglichkeiten die Adresse der anzuzeigenden Webseite und den Seitentitel.
+
+Beide Einstellungen erfordern die Bestätigung durch Klick auf "Konfiguration übernehmen". Wenn sich das Programm im Präsentationsmodus befindet, wird dann auch umgehend die entsprechende Webseite geladen.
+
+![Webseite anzeigen](images/029-webseite-anzeigen.png)
+
+Als Browser kommt "WebView2" zum Einsatz. Das entspricht, grob gesagt, dem Microsoft-Edge-Browser in der aktuell auf dem PC installierten Version.
+
+Der Speicher des Browsers ist jedoch vom "normalen" Browser auf dem PC separiert. Das heisst, dass beispielsweise bei Webseiten, die einen Login erfordern, ein Login in Edge nicht ausreichend ist, sondern der Login auch in Kirschenkrönung separat erfolgen muss. Der Benutzer kann jedoch mit der angezeigten Webseite ganz normal interagieren, wie in jedem anderen Browserfenster auch. Auch die Anzeige von PDF-Dateien (siehe Screenshot) usw. ist möglich - alles, was im normalen Webbrowser geht, geht auch hier.
+
+Die Seite zeigt das in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) festgelegte Veranstaltungs-Logo, nicht aber das Hintergrundbild an.
+
 ## Bild anzeigen
+
+Diese Seite ermöglicht das Anzeigen eines einzelnen Bildes. Weil es hier nur um ein einzelnes Bild geht, muss dieses _nicht_ zuvor zum Teil eines Bilder-Pools gemacht werden.
+
+![Einzelbild anzeigen](images/030-bild-anzeigen.png)
+
+Dementsprechend überschaubar sind die Einstellungsmöglichkeiten dieser Seite: Über den entsprechend beschrifteten Button kann ein anzuzeigendes Bild ausgewählt werden, eine [Stretch-Option](../technical/stretch-optionen.md) für das Bild ausgewählt, ein Seitentitel eingegeben und die Anzeige des in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) festgelegten Hintergrundbilds aktiviert oder deaktiviert werden. Das ebenfalls in den Projekteinstellungen wählbare Veranstaltungs-Logo wird auf dieser Seite immer angezeigt. Die Auswahl eines anderen Bildes oder die Änderung des Seitentitels muss via "Konfiguration übernehmen"-Button bestätigt werden. Änderungen der Stretch-Option oder Ein-/Ausblenden des Hintergrundbilds werden ohne Bestätigung sofort wirksam.
 
 ## Zwischenergebnisseite
 
