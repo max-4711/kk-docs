@@ -8,9 +8,9 @@ Das Programm bei der Installation entpackt in das Verzeichnis `%localappdata%\Ki
 
 Technisch ist das grundsätzlich möglich, allerdings ist es bislang noch nie getestet worden. 
 
-Es könnte sein, dass zusätzliche Schritte nötig sind (Seiten vom Typ "Titelseiten" könnten z.B. das alte Jahr enthalten und müssten zur Änderung gelöscht und neu erstellt werden). Weil aus dem Projektordner keine Dateien (wie Bilder) gelöscht werden, auch wenn sie im konfigurierten Veranstaltungsablauf nicht mehr verwendet werden, würde sich der Projektordner unweigerlich mehr und mehr aufblähen.
+Weil aus dem Projektordner keine Dateien (wie Bilder) gelöscht werden, auch wenn sie im konfigurierten Veranstaltungsablauf nicht mehr verwendet werden, würde sich der Projektordner unweigerlich mehr und mehr aufblähen.
 
-Aus diesem Grund lautet die Empfehlung daher, den Veranstaltungsablauf lieber wieder "von vorne" zu konfigurieren.
+Aus diesem Grund lautet die Empfehlung daher, den Veranstaltungsablauf lieber wieder "von vorne" zu konfigurieren. Möglich wäre ansonsten aber evtl. eine Art "Template" zu erstellen und von diesem für jedes Jahr eine Kopie zu erstellen.
 
 ## Die Installation eines Updates schlägt immer wieder fehl, bzw. nach der Installation erscheint statt der neuen Programmversion eine Fehlermeldung
 

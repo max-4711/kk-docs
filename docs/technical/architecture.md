@@ -35,6 +35,15 @@ Hier geht es um technische Details der Softwarearchitektur und Entwicklungsinfra
 ## Codebasis
 
 * Hier und da sieht man dem leider Quellcode an, dass einige Features unter recht grossem Zeitdruck noch kurz vor dem Kirschenmarkt implementiert wurden. Dennoch hat sich die Software als äußerst robust erwiesen und ist bislang noch nie während der Veranstaltung abgestürzt.
+* Zentrale Designphilosophie und Anforderungen:
+    * Kompatibilität zwischen den Jahren spielt keine Rolle
+    * Während der Wahl DARF das Programm einfach nicht abstürzen. 
+        * Deshalb kann es hier praktisch gar nicht genug Null-Checks oder sonstige Prüfungen zur Erkennung dubioser Zustände geben
+        * Deswegen auch Vorsicht mit Exceptions
+    * In der Konfigurationsphase ist es nicht sooo tragisch, wenn es mal Probleme gibt
+    * Das ganze läuft während der Veranstaltung auf einem Laptop mit unbekannten Specs; das Programm sollte Ressourcen also besser nicht gleich "mit der Baggerschaufel" allokieren (zugleich kann auch nicht erwartet werden, dass es auf jeder "Kartoffel" lauffähig ist)
+    * Wenn es "nur UI-Code" ist, sind Tests keine absolute Priorität, aber wenn es zentrale Logik ist (und Fehler das Potenzial haben, das Festzelt in Rage zu versetzen...), muss es "wasserdicht" mit Unit Tests abgedeckt sein
+    * Potenzielle Wiederverwendbarkeit für andere Veranstaltungen ist zweitrangig, zumindest einfache Änderungen am Design, Veranstaltungsablauf o.Ä. sollten aber ohne Programmänderungen machbar sein
 
 ## Komponenten
 
