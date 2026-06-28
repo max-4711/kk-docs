@@ -238,6 +238,56 @@ Dementsprechend überschaubar sind die Einstellungsmöglichkeiten dieser Seite: 
 
 ## Zwischenergebnisseite
 
+Der Zweck dieser Seite ist -wenig überraschend- die Anzeige des jeweils gerade aktuellen Zwischenstands in tabellarischer Form:
+
+![Zwischenergebnistabelle nach einem Spiel](images/031-zwischenergebnisseite-01.png)
+
+Spiele, die zum jeweiligen Zeitpunkt in der Veranstaltung noch nicht gespielt wurden, haben noch keine Spalte in der Tabelle. Diese wird erst erzeugt, sobald Ergebnisse vorliegen. So füllt sich diese Tabelle deshalb im Verlauf der Veranstaltung:
+
+![Zwischenergebnistabelle später](images/032-zwischenergebnisseite-02.png)
+
+Wenn in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) die Verwendung der Spiel-Icons deaktiviert oder auf die Seite des jeweiligen Spiels beschränkt ist, wird der Titel der Spielseiten statt dem Icon verwendet. Vor allem, wenn sich die Tabelle nach einigen Spielen füllt, wirkt dies jedoch unübersichtlich und wird deshalb nicht empfohlen:
+
+![Zwischenergebnistabelle mit Text](images/033-zwischenergebnisseite-03.png)
+
+In der für das Publikum nicht sichtbaren Administrationsansicht werden jedoch _immer_ Texte verwendet, niemals die Icons.
+
+Die einzige Einstellung für diese Seite ist die Vergabe eines Titels (standardmäßig: "Zwischenstand"). Änderungen am Titel müssen mit "Konfiguration übernehmen" bestätigt werden.
+
+Die Seite zeigt das in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) festgelegtes Veranstaltungs-Logo und Hintergrundbild an.
+
 ## Endergebnisübersicht
 
+Die Endergebnisübersicht hat einen ähnlichen Zweck wie die [Zwischenergebnisseite](#zwischenergebnisseite) und zeigt die gleichen Informationen, wird jedoch am Ende der Veranstaltung aus dramaturgischen Zwecken bevorzugt, da sie über eine zusätzliche Funktion verfügt: Im Ausgangszustand zeigt die Seite zwar bereits alle Namen und Spiele an, jedoch noch keine Punktzahlen.
+
+![Endergebnistabelle: Ausgangszustand](images/034-endergebnisuebersicht-01.png)
+
+Mit einem Klick auf den Button "Zeile einblenden" in der Administrationsansicht werden jeweils die Punktzahlen einer weiteren Kandidatin eingeblendet. Die Summe bleibt dabei jedoch vorerst noch verdeckt!
+
+![Endergebnistabelle: Erste Zeile aufgedeckt](images/035-endergebnisuebersicht-02.png)
+
+Nachdem die Zeilen für alle Kandidatinnen eingeblendet wurden, stehen somit die Ergebnisse aller Spiele auf dem Bildschirm, noch nicht jedoch die Gesamtsummen.
+
+![Endergebnistabelle: Beide Zeilen aufgedeckt](images/036-endergebnisuebersicht-03.png)
+
+Die Gesamtsummen werden erst mit einem Klick auf "Summen anzeigen" eingeblendet. Bei Bedarf kann alternativ von jedem beliebigen Zwischenzustand mit einem Klick auf "ALLES anzeigen" zu diesem Zustand gesprungen werden:
+
+![Endergebnistabelle: Alles aufgededeckt](images/037-endergebnisuebersicht-04.png)
+
+Wie auch die Zwischenergebnisseite verwendet Endergebnisübersicht den Titel des Spiels in Textform, falls in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) die Verwendung der Spiel-Icons deaktiviert oder auf die Seite des jeweiligen Spiels beschränkt ist. Am Ende der Veranstaltung gilt jedoch erst recht, dass dies unübersichtlich wirkt und daher nicht empfohlen wird.
+
+Die Seite zeigt das in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) festgelegtes Veranstaltungs-Logo und Hintergrundbild an.
+
 ## Endergebnisseite
+
+Die Endergebnisseite hat keine konfigurierbaren Einstellungen und steht typischerweise am Ende der Veranstaltung. Sie zeigt automatisch eine Gratulation für die Siegerin bzw. neue Kirschenkönigin, basierend auf den zuvor ermittelten Punkten.
+
+Die dabei angezeigten Informationen entsprechen denen, die zuvor im Menü [Konfiguration->Kandidatinnen verwalten](konfiguration.md#kandidatinnen-verwalten) erfasst wurden.
+
+![Endergebnisseite: Siegerin steht fest](images/038-endergebnissseite-01.png)
+
+Falls noch keine Siegerin gekürt werden kann, weil es zwei punktgleich Erstplatzierte gibt, zeigt die Seite statt Glückwünschen einen Hinweis auf die notwendige Verlängerung an:
+
+![Endergebnisseite: Unentschieden](images/039-endergebnissseite-02.png)
+
+Die Seite zeigt das in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) festgelegtes Veranstaltungs-Logo und Hintergrundbild an.
