@@ -86,7 +86,7 @@ Wie zuvor bereits erwähnt, besteht der wichtige Unterschied zur Testmessung dar
 
 Der dritte Eintrag im Kontextbenü bei Rechtsklick auf den Namen einer Kandidatin ist "Lautstärke manuell erfassen/korrigieren" - bei welcher ein Ergebnis manuell eingetragen werden kann. Diese Funktion kann genutzt werden, falls z.B. versehentlich eine Testmessung ausgeführt wurde, um das Ergebnis der Kandidatin "gutzuschreiben". Aber Achtung - jegliches zuvor möglicherweise vorhandene Ergebnis wird überschrieben.
 
-Für die automatische und üblicherweise verwendete Punktevergabe zu nutzen, muss der Button "Punkte berechnen" angeklickt werden. Auch beim Wechsel auf die nächste Seite im Ablauf werden keine Punkte automatisch eingetragen.
+Um die automatische und üblicherweise verwendete Punktevergabe zu nutzen, muss der Button "Punkte berechnen" angeklickt werden. Auch beim Wechsel auf die nächste Seite im Ablauf werden keine Punkte automatisch eingetragen.
 
 > ⚠️ **Punktevergabe nicht vergessen!**
 >
@@ -104,11 +104,115 @@ Spätestens vor dem Klick auf "Punkte berechnen" sollte nochmals ein kurzer prü
 
 ## Kirschen-Schätzspiel
 
+Die Seite "Kirschen-Schätzspiel" dient -offensichtlich- der Begleitung des Kirschen-Schätzspiels, bei dem die Kandidatinnen das Gewicht eines Behälters voll Kirschen schätzen müssen. Es gewinnt die Kandidatin, bei der die Differenz zwischen Schätzung und realem Gewicht am geringsten ist.
+
+Die Seite zeigt sowohl Veranstaltungslogo als auch Hintergrund aus den Projekteinstellungen an. Beim Spiel-Icon handelt es sich (nicht veränderlich) um eine Kirsche.
+
+Die einzige Einstellung der Seite ist der frei wählbare Titel. Änderungen daran müssen via "Konfiguration übernehmen"-Button bestätigt werden.
+
+![Kirschen-Schätzspiel: Ausgangzustand](images/019-kirschen-schaetzspiel-01.png)
+
+Die Zuschauer sehen im Ausgangszustand der Seite die Namen, dahinter jeweils einen Strich und drei grosse Fragezeichen hinter dem Text "Gemessenes Gewicht der Kirschen".
+
+In der Administrationsansicht wird eine Liste aller Kandidatinnen eingeblendet (wie erfasst gemäß [Konfiguration->Kandidatinnen verwalten](konfiguration.md#kandidatinnen-verwalten)). Mit einem Rechtsklick auf den Namen einer Kandidatin und einem Klick auf "Abgegebene Schätzung eingeben" öffnet sich ein Eingabefenster. Die Schätzung muss in Gramm eingegeben werden.
+
+Sobald für eine Kandidatin eine Schätzung erfasst wurde, wird diese für das Publikum anstatt des Strichs hinter ihrem Namen sichtbar:
+
+![Kirschen-Schätzspiel: Schätzung eingegeben](images/020-kirschen-schaetzspiel-02.png)
+
+Nachdem für alle Kandidatinnen ihre geschätzten Werte eingegeben wurden, kann in das Eingabefeld "Geben Sie das per Waage gemessene Gewicht der Kirschen ein [g]" das tatsächliche Gewicht in Gramm eingegeben werden.
+
+Der Klick auf den Button "Abweichungen berechnen und anzeigen" berechnet anschliessend die Differenzen zu den jeweiligen Schätzungen und macht sowohl die Differenzen als auch das Gewicht für das Publikum sichtbar:
+
+![Kirschen-Schätzspiel: Ergebnis](images/021-kirschen-schaetzspiel-03.png)
+
+> ℹ️ **Falls es mal wieder hektisch wird...**
+>
+> Falls es während der Veranstaltung etwas hektisch werden sollte, kein Problem: 
+> Es ist auch möglich, zuerst das reale Gewicht einzugeben und im Anschluss noch Schätzungen nachzureichen oder zu korrigieren. Die Reihenfolge der Eingabe spielt für das Programm keine Rolle.
+> Lediglich die Anzeige auf dem Bildschirm könnte das Publikum entsprechend kurzzeitig irritieren.
+
+Um die automatische und üblicherweise verwendete Punktevergabe zu nutzen, muss der Button "Punkte berechnen" angeklickt werden. Auch beim Wechsel auf die nächste Seite im Ablauf werden keine Punkte automatisch eingetragen.
+
+> ⚠️ **Punktevergabe nicht vergessen!**
+>
+> Es werden vom Programm keine Punkte "stillschweigend" eingetragen/gespeichert. 
+> Die Punktevergabe muss vom Benutzer gezielt ausgelöst und bestätigt werden.
+
+Spätestens vor dem Klick auf "Punkte berechnen" sollte nochmals ein kurzer prüfender Blick auf die links davon ausgewählte Regel zur Punktevergabe gehen. Für eine detaillierte Auflistung und Erläuterung aller wählbarer Regeln siehe Kapitel [Punktevergabe](../technical/punktevergabe.md). Nach dem Klick auf den "Punkte berechnen"-Button öffnet das Programm eine Dialogbox und zeigt darin, wie viele Punkte welcher Kandidatin gutgeschrieben werden (siehe Screenshot). Nach der Bestätigung dieser Nachfrage speichert das Programm die Punkte dann.
+
 ## Allgemeine Spielergebnisseite (sofort aufdecken)
+
+Die "Allgemeine Spielergebnisseite" kann genutzt werden, um die Ergebnisse von Spielen zu erfassen, die nicht über dieses Programm errechnet werden (also anders als bei Lautstärkemessung oder dem Kirschen-Schätzspiel).
+
+Der Zusatz "sofort aufgecken" bedeutet, dass ins Programm eingegebene Ergebnisse bzw. Punktzahlen _sofort_ für das Publikum sichtbar gemacht werden. Beim Kirschenmarkt wird dieser Seitentyp üblicherweise für das Glücksrad verwendet.
+
+Als Einstellungsmöglichkeiten bietet die Seite ein Eingabefeld für den Seitentitel und einen Auswahlfeld für das Spiel-Icon. Eine Änderung des Seitentitels muss über den Button "Konfiguration übernehmen" bestätigt werden, bevor sie für das Publikum sichtbar wird. Eine Änderung des Spiel-Icons hingegen wird sofort für das Publikum sichtbar. Als Spiel-Icon können lediglich die in der Auswahl verfügbaren Icons verwendet werden - die Verwendung einer eigenen Grafik (z.B. aus einer Datei) ist nicht möglich. Sofern in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) die entsprechende Einstellung gesetzt ist, wird das Spiel-Icon nicht nur auf der Seite des Spiels, sondern auch in den Ergebnistabellen verwendet (siehe auch: [Zwischenergebnisseite](#zwischenergebnisseite) und [Endergebnisseite](#endergebnisseite)).
+
+Im Ausgangszustand sieht das Publikum die Namen der Kandidatinnen und dahinter einen Strich:
+
+![Allgemeine Spielergebnisseite (sofort aufdecken): Ausganszustand](images/022-allgemeine-spielergebnissseite-sofort-aufdecken-01.png)
+
+In der Administrationsansicht wird eine Liste aller Kandidatinnen eingeblendet (wie erfasst gemäß [Konfiguration->Kandidatinnen verwalten](konfiguration.md#kandidatinnen-verwalten)). Mit einem Rechtsklick auf den Namen einer Kandidatin und einem Klick auf "Punkte eingeben" öffnet sich ein Eingabefenster. Nach der Eingabe der Punktzahl und Bestätigung wird diese Zahl sofort für das Publikum sichtbar:
+
+![Allgemeine Spielergebnisseite (sofort aufdecken): Erste Punktzahl eingegeben](images/023-allgemeine-spielergebnissseite-sofort-aufdecken-02.png)
+
+Weil die Punktevergabe auf dieser Seite ohnehin manuell vom Benutzer ausgeführt wird, muss sie -anders als bei Lautstärkemessung und Kirschen-Schätzspiel- _nicht_ noch gesondert bestätigt werden, um in die Ergebnistabelle übertragen zu werden. Aus dem gleichen Grund spielen auch die [Regeln für die automatische Punktevergabe](../technical/punktevergabe.md) hier keine Rolle.
 
 ## Allgemeine Spielergebnisseite (gesammelt aufdecken)
 
+Die "Allgemeine Spielergebnisseite" kann genutzt werden, um die Ergebnisse von Spielen zu erfassen, die nicht über dieses Programm errechnet werden (also anders als bei Lautstärkemessung oder dem Kirschen-Schätzspiel).
+
+Der Zusatz "gesammelt aufgecken" bedeutet, dass ins Programm eingegebene Ergebnisse bzw. Punktzahlen _erst nach Bestätigung_ für das Publikum sichtbar gemacht werden. Das ermöglicht es, die Ergebnisse eines Spiels für alle Kandidatinnen gleichzeitig sichtbar zu machen. Beim Kirschenmarkt wird dieser Seitentyp üblicherweise für das Telefonvoting verwendet.
+
+Die Einstellungsmöglichkeiten sind identisch zur [Variante der Seite zum sofortigen Aufdecken](#allgemeine-spielergebnisseite-sofort-aufdecken):
+Als Einstellungsmöglichkeiten bietet die Seite ein Eingabefeld für den Seitentitel und einen Auswahlfeld für das Spiel-Icon. Eine Änderung des Seitentitels muss über den Button "Konfiguration übernehmen" bestätigt werden, bevor sie für das Publikum sichtbar wird. Eine Änderung des Spiel-Icons hingegen wird sofort für das Publikum sichtbar. Als Spiel-Icon können lediglich die in der Auswahl verfügbaren Icons verwendet werden - die Verwendung einer eigenen Grafik (z.B. aus einer Datei) ist nicht möglich. Sofern in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) die entsprechende Einstellung gesetzt ist, wird das Spiel-Icon nicht nur auf der Seite des Spiels, sondern auch in den Ergebnistabellen verwendet (siehe auch: [Zwischenergebnisseite](#zwischenergebnisseite) und [Endergebnisseite](#endergebnisseite)).
+
+Im Ausgangszustand sieht das Publikum die Namen der Kandidatinnen und dahinter einen Strich:
+
+![Allgemeine Spielergebnisseite (gesammelt aufdecken): Ausganszustand](images/024-allgemeine-spielergebnissseite-gesammelt-aufdecken-01.png)
+
+In der Administrationsansicht wird eine Liste aller Kandidatinnen eingeblendet (wie erfasst gemäß [Konfiguration->Kandidatinnen verwalten](konfiguration.md#kandidatinnen-verwalten)). Mit einem Rechtsklick auf den Namen einer Kandidatin und einem Klick auf "Punkte eingeben" öffnet sich ein Eingabefenster. Der Unterschied zur [Variante der Seite zum sofortigen Aufdecken](#allgemeine-spielergebnisseite-sofort-aufdecken): Nach der Eingabe der Punktzahl und Bestätigung wird diese Zahl _noch nicht_ für das Publikum sichtbar. Erst ein Klick auf den Button "Präsentationsansicht aktualisieren" macht das Ergebnis für das Publikum sichtbar:
+
+![Allgemeine Spielergebnisseite (sofort aufdecken): Ergebnis freigeschaltet](images/025-allgemeine-spielergebnissseite-gesammelt-aufdecken-02.png)
+
+Hierbei besteht ein weiterer (kleiner) Unterschied zur [Variante der Seite zum sofortigen Aufdecken](#allgemeine-spielergebnisseite-sofort-aufdecken): Diese Variante der Seite hier sortiert die Namen der Kandidatinnen bei Freischaltung des Ergebnisses gemäss der Rangfolge in diesem Spiel von oben (die meisten Punkte) nach unten (die wenigsten Punkte).
+
+Weil die Punktevergabe auf dieser Seite ohnehin manuell vom Benutzer ausgeführt wird, muss sie -anders als bei Lautstärkemessung und Kirschen-Schätzspiel- _nicht_ noch gesondert bestätigt werden, um in die Ergebnistabelle übertragen zu werden. Aus dem gleichen Grund spielen auch die [Regeln für die automatische Punktevergabe](../technical/punktevergabe.md) hier keine Rolle.
+
 ## Diashow
+
+Die Diashow seite zeigt -ihrem Namen entsprechend- wechselnde Bilder. Beim Kirschenmarkt wird dies genutzt, um Sponsoren-Logos einzublenden, teilweise auch um Impressionen bzw. Fotos aus der vergangenen Amtszeit der noch aktuellen Kirschenkönigin revuepassieren zu lassen.
+
+Die Seite zeigt das in den [Projekteinstellungen](konfiguration.md#projekteinstellungen) festgelegte Veranstaltungs-Logo und solange die Diashow pausiert ist auch immer das Hintergrundbild.
+
+### Einstellungen
+
+Die Seite erlaubt zunächst das Festlegen eines Seitentitels, eines Texts, der während pausierter Diashow angezeigt wird. Änderungen an diesen beiden Einstellungen müssen durch Klick auf "Konfiguration übernehmen" bestätigt werden, bevor sie übernommen werden.
+
+![Diashow-Seite: Ausganszustand](images/026-diashow-01.png)
+
+Die nachfolgend beschriebenen Einstellungen werden immer beim Starten der Diashow übernommen (also _nicht_ durch den Klick auf "Konfiguration übernehmen").
+
+Die Diashow-Seite zeigt grundsätzlich immer die Bilder eines bestimmten [Bilder-Pools](konfiguration.md#bilder-laden) - folglich muss dieser ebenfalls als Teil der Einstellungen ausgewählt werden. Darüber hinaus lässt sich die Anzahl der Sekunden konfigurieren, nach der jeweils zum nächsten Bild gewechselt wird. Bei gesetztem Haken für die Option "Diashow beim Aufrufen der Seite automatisch starten" wird der auf dem vorherigen Screenshot abgebildete Pausen-Zustand (von dem die Diashow manuell gestartet werden kann) übersprungen und es geht sofort los mit dem ersten Bild. Was das erste Bild ist, bestimmt (egal ob manuell oder automatisch gestartet) die Option "Diashow mit einem zufälligen Bild starten". Wenn deaktiviert, beginnt die Abfolge der Bilder immer mit dem ersten Bild aus dem Bilderpool - bei gesetztem Haken hingegen startet sie mit einem zufällig ausgewählten. Dies ändert jedoch nur den Startpunkt der Abfolge - die Reihenfolge ist immer gleich und entspricht der der Bilder im Pool.
+
+Ebenfalls konfiguriert werden kann ("Caption (Metadaten) anzeigen"), ob die beim Hinzufügen des Bildes ggfs. gespeicherten Metadaten angezeigt werden sollen und ob das Projekt-Hintergrundbild auch während der laufenden Diashow eingeblendet werden soll. Beide Optionen sind bei der Einblendung von Fotos tendenziell sinnvoll, für Sponsoren-Logos aber eher nicht:
+
+![Diashow-Seite: Diashow mit problematischen Einstellungen](images/028-diashow-03.png)
+
+Viele Logos werden leider nicht mit transparentem Hintergrund, sondern einem hellen Hintergrund zur Verfügung gestellt. Das sorgt dann dafür, dass das Logo nicht wie vor dem Hintergrund erscheint, sondern der Hintergrund nur irgendwo am Rande wie willkürlich platziert zu sehen ist. Bei der Einblendung von Caption/Metadaten wird eine leicht grauer, hauptsächlich Transparente Box vor dem Bild platziert, mit den entsprechenden Metadaten zum Bild darin. Während dies für Fotos sinnvoll sein kann, dürfte es beim Logo eines Sponsor eher unerwünscht sein: In den Metadaten sind dort keine relevanten Informationen enthalten (der Firmenname geht hoffentlich bereits aus dem Logo hervor, muss also nicht noch dazugeschrieben werden), und Datum sowie Beschreibung sind keine relevanten zusätzlichen Informationen. Im Gegenteil: Als Datum dürfte sich hier kaum ein sinnvoller Wert finden (während bei Fotos der Zeitpunkt der Erstellung für den Zuschauer interessant sein kann).
+
+Werden die beiden genannten Optionen deaktiviert, wird während der Diashow nicht mehr als das jeweilige Bild selbst eingeblendet:
+
+![Diashow-Seite: Laufende Diashow](images/027-diashow-02.png)
+
+### Interaktion
+
+Eine Diashow kann jederzeit gestartet oder pausiert werden. Dafür stehen die Buttons "Diashow starten", "Diashow pausieren" und "Diashow" beenden zur Verfügung. Während die Diashow bereits gestartet ist, ist der Button zum Starten logischerweise deaktiviert - analog dazu verhält es sich mit den anderen beiden Buttons.
+
+Der Unterschied zwischen "pausieren" und "beenden" liegt darin, wo die Diashow fortgesetzt wird, falls sie wieder gestartet wird: Beim pausieren beginnt die Diashow mit dem nächsten in der Reihenfolge passenden Bild, beim Beenden beginnt die Diashow wieder mit dem ersten (oder je nach Einstellung -siehe oben- zufälligen Bild).
+
+In der Administrationsansicht wird eine Liste aller Bilder im gewählten Pool angezeigt, die somit von der Diashow berücksichtigt werden. Mit einem Rechtsklick auf ein Bild und Klick auf "Bild präsentieren" kann sofort zum jeweiligen Bild gesprungen werden, ohne erst alle sonst davor gezeigten abzuwarten. Die Diashow wird anschliessend der Reihenfolge entsprechend ab dem jetzt "angesprungenen" Bild fortgesetzt.
 
 ## Webseite anzeigen
 
